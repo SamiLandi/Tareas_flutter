@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class Tarjetas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const List<String> nombres = ['Juan', 'María', 'Pedro', 'Ana'];
-    const nombre = "P";
+    const List<String> nombres = ['Tarjeta_1', 'Tarjeta_2', 'Tarjeta_3', 'Tarjeta 4'];
     var ancho = MediaQuery.of(context).size.width;
     var alto = MediaQuery.of(context).size.height;
     TextStyle styleTitles = const TextStyle(
@@ -118,7 +117,7 @@ class Tarjetas extends StatelessWidget {
                 var p = nombres[
                     index]; // Eliminamos 'const' para permitir que 'p' cambie en cada iteración
                 return Container(
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                       vertical: 10, horizontal: 5), // Eliminamos 'const'
                   decoration: BoxDecoration(
                     color: Colors.blue,
@@ -129,7 +128,7 @@ class Tarjetas extends StatelessWidget {
                   child: Center(
                     child: Text(
                       p,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ),
                 );
