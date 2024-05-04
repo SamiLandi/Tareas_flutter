@@ -17,7 +17,7 @@ class _PaginaConEstadoState extends State<PaginaConEstado> {
         title: const Text("Pagina con estado"),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(children: [
           TextFormField(
             decoration: const InputDecoration(

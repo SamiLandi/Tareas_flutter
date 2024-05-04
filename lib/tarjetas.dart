@@ -1,142 +1,239 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 
-class Tarjetas extends StatelessWidget {
+class TarjetasPage extends StatefulWidget {
+  const TarjetasPage({super.key});
+
+  @override
+  State<TarjetasPage> createState() => _TarjetasPageState();
+}
+
+class _TarjetasPageState extends State<TarjetasPage> {
   @override
   Widget build(BuildContext context) {
-    const List<String> nombres = ['Tarjeta_1', 'Tarjeta_2', 'Tarjeta_3', 'Tarjeta 4'];
-    var ancho = MediaQuery.of(context).size.width;
-    var alto = MediaQuery.of(context).size.height;
-    TextStyle styleTitles = const TextStyle(
-        color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold);
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Center(
-            child: Text(
-          "Tarjetas",
-          style: TextStyle(color: Colors.white, fontSize: 18),
-        )),
-        actions: [
-          GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.notifications,
-              color: Colors.grey[400],
-              size: 25,
-            ),
-          )
-        ],
-        leading: Icon(
-          Icons.menu,
-          color: Colors.grey[400],
-          size: 35.0,
+        appBar: AppBar(
+          title: Center(
+              child: Text("TARJETAS",
+                  style: GoogleFonts.poppins(
+                      color: Colors.black, fontSize: 20.0))),
+          actions: [
+            GestureDetector(
+              onTap: () {},
+              child: Icon(
+                Icons.notifications,
+                color: Colors.grey[400],
+                size: 25,
+              ),
+            )
+          ],
+          leading: Icon(
+            Icons.menu,
+            color: Colors.grey[400],
+            size: 35.0,
+          ),
+          backgroundColor: Colors.white,
         ),
-        backgroundColor: Colors.black,
-      ),
-      body: Container(
-        padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Column(
+        body: SingleChildScrollView(
+          child: Container(
+          
+          padding: const EdgeInsets.all(20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text(
+              "Tarjetas",
+              style: TextStyle(fontSize: 24),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              padding: const EdgeInsets.all(20),
+              height: 150,
+              decoration: BoxDecoration(
+                color: HexColor("#FF0000"),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.carpenter_rounded,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      "454545",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      "454545",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      "454545",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    )
+                  ]),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  width: 130,
+                  height: 130,
                   decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(30),
+                    color: HexColor("#FF0000"),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  width: ancho,
-                  height: 150,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 50.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Icon(
-                              Icons.card_giftcard,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              "\$9999 99",
-                              style: styleTitles,
-                              textAlign: TextAlign.left,
-                            ),
-                            const Row(
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      "SI=H-00054157624",
-                                      style: TextStyle(color: Colors.black),
-                                      textAlign: TextAlign.left,
-                                    ),
-                                    SizedBox(
-                                      width: 50,
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                            const Text(
-                              "tarjeta 50",
-                              style: TextStyle(color: Colors.black),
-                              textAlign: TextAlign.left,
-                            ),
-                          ],
+                  child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.percent,
+                          color: Colors.white,
                         ),
-                      ),
-                    ],
-                  ),
+                        Text(
+                          "Recorridos",
+                          style: TextStyle(color: Colors.black),
+                        )
+                      ]),
+                ),
+                const SizedBox(
+                  width: 20,
                 ),
                 Container(
+                  width: 130,
+                  height: 130,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(25),
+                    color: HexColor("#FF0000"),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  width: ancho,
-                  height: 10,
+                  child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.percent,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Recorridos",
+                          style: TextStyle(color: Colors.black),
+                        )
+                      ]),
                 )
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
-              child: Text(
-                "",
-                style: TextStyle(color: Colors.grey),
-              ),
+            const SizedBox(
+              height: 20,
             ),
-            GridView.count(
-              crossAxisCount: 2,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: List.generate(4, (index) {
-                var num = index;
-                var p = nombres[
-                    index]; // Eliminamos 'const' para permitir que 'p' cambie en cada iteración
-                return Container(
-                  margin: const EdgeInsets.symmetric(
-                      vertical: 10, horizontal: 5), // Eliminamos 'const'
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 130,
+                  height: 130,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(25),
+                    color: HexColor("#FF0000"),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  width: ancho * 0.4,
-                  height: 100,
-                  child: Center(
-                    child: Text(
-                      p,
-                      style: const TextStyle(color: Colors.white),
-                    ),
+                  child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.percent,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Recorridos",
+                          style: TextStyle(color: Colors.black),
+                        )
+                      ]),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  width: 130,
+                  height: 130,
+                  decoration: BoxDecoration(
+                    color: HexColor("#FF0000"),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                );
-              }),
+                  child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.percent,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Recorridos",
+                          style: TextStyle(color: Colors.black),
+                        )
+                      ]),
+                )
+              ],
             ),
-          ],
+            const SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width - 100,
+                height: 55,
+                decoration: BoxDecoration(
+                  color: HexColor("#FF0000"),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Center(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.location_city, color: Colors.white,),
+                        Text(
+                    "454545",
+                  style: TextStyle(
+                        color: Colors.black,
+                  ),
+                ),
+                      ],
+                    )),
+              ),
+            )
+          ]),
         ),
-      ),
-    );
+        ),
+        floatingActionButton: Container(
+          width: 115,
+          height: 45,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              color: HexColor("#99CC00")),
+          child: const Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+                Text("Agregar", style: TextStyle(color: Colors.white)),
+              ]),
+        ));
   }
 }

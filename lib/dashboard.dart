@@ -50,7 +50,7 @@ class Dashboard extends StatelessWidget {
                     color: HexColor("#FF0000"),
                     borderRadius: BorderRadius.circular(25),
                   ),
-                  width: ancho,
+                  width: ancho-30,
                   height: 150,
                   child: Row(
                     children: [
@@ -75,11 +75,11 @@ class Dashboard extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      "SI=H-00054157624",
+                                      "SI=H-00054157",
                                       style: styleTitles,
                                     ),
                                     const SizedBox(
-                                      width: 10,
+                                      width: 15,
                                     ),
                                     Text(
                                       "12.50",
